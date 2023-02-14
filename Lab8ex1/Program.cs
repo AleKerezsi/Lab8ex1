@@ -34,14 +34,21 @@ namespace Lab8ex1
 
             Vagon vagon = new Vagon(5,1992);
 
-            VagonMarfa vagonMarfa = new VagonMarfa(TipMarfa.Cereale,10,20,2013);
+            VagonMarfa vagonMarfa1 = new VagonMarfa(TipMarfa.Cereale,10, 50,2013);
+            VagonMarfa vagonMarfa2 = new VagonMarfa(TipMarfa.Carbuni, 30, 50, 2013);
+            VagonMarfa vagonMarfa3 = new VagonMarfa(TipMarfa.Otel, 20, 50, 2013);
+            VagonMarfa vagonMarfa4 = new VagonMarfa(TipMarfa.Cereale, 7, 50, 2013);
+
             VagonPersoane vagonPersoane = new VagonPersoane(80, 20, 2020);
             VagonClasaI vagonClasaI = new VagonClasaI(50,10,2007);
 
             Tren tren = new Tren(locomotiva);
 
             tren.AdaugareVagon(vagon);
-            tren.AdaugareVagon(vagonMarfa);
+            tren.AdaugareVagon(vagonMarfa1);
+            tren.AdaugareVagon(vagonMarfa2);
+            tren.AdaugareVagon(vagonMarfa3);
+            tren.AdaugareVagon(vagonMarfa4);
             tren.AdaugareVagon(vagonPersoane);
             tren.AdaugareVagon(vagonClasaI);
 
@@ -49,7 +56,14 @@ namespace Lab8ex1
 
             tren.OpresteInGara();
 
+            Console.WriteLine("Trenul are in total " + tren.NrLocuri + " locuri acoperind vagoanele de persoane si vagoanele clasa I");
 
+            var informatiiCapacitateMarfa = tren.ObtineInformatiiMarfa();
+
+            foreach (var info in informatiiCapacitateMarfa) 
+            {
+                Console.WriteLine("Pentru " + info.TipMarfa + " capacitatea totala este de " + info.CapacitateTotala + " tone ");
+            }
 
         }
     }

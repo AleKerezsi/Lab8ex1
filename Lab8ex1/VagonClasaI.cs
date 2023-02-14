@@ -11,6 +11,11 @@ namespace Lab8ex1
 
         }
 
+        public int GetNumarLocuri()
+        {
+            return base.GetNumarLocuri();
+        }
+
         public void PornireAerConditionat()
         {
             Console.WriteLine("Aerul conditionat s-a pornit");

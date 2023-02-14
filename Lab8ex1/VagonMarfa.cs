@@ -16,5 +16,10 @@ namespace Lab8ex1
             this.CapacitateInTone = capacitateInTone;
         }
 
+        public int GetCapacitateInTone() 
+        {
+            return CapacitateInTone;
+        }
+
     }
 }

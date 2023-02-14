@@ -12,6 +12,11 @@ namespace Lab8ex1
             this.NumarDeLocuri = numarDeLocuri;
         }
 
+        public int GetNumarLocuri() 
+        {
+            return NumarDeLocuri;
+        }
+
         public void InchideUsile()
         {
             Console.WriteLine("Usile s-au inchis");
